@@ -36,7 +36,7 @@
         <div class="header">
             <div id="top-left" class="fixed header">
                 <div class="name">Kellen<span>Biondi</span></div>
-                <div class="section-title">[ Profile ]</div>
+                <div class="section-title title-animate">[ Profile ]</div>
             </div>
             <div id="top-right" class="fixed">
                 <ul>
@@ -65,9 +65,9 @@
         </div>
         <div id="about-section" class="section">
             <div class="inner right-align">
-                <div class="header">Kellen<span>Biondi</span>
+<!--                 <div class="header">Kellen<span>Biondi</span>
                     <div class="section-title title-animate">[ About Me ]</div>
-                </div>
+                </div> -->
                 <!-- <img class="profile-img" src="img/profile.png" /> -->
                 <div class="lead-text">
                     <h1 class="mast__title js-spanize">Creative</h1>
@@ -83,9 +83,9 @@
         </div>
         <div id="portfolio-section" class="section">
             <div class="inner">
-                <div class="header">Kellen<span>Biondi</span>
+<!--                 <div class="header">Kellen<span>Biondi</span>
                     <div class="section-title title-animate">[ Portfolio ]</div>
-                </div>
+                </div> -->
                 <div class="portfolio-item minesweeper"></div>
                 <div class="portfolio-item minesweeper"></div>
                 <div class="portfolio-item minesweeper"></div>
@@ -113,7 +113,12 @@
     <script type="text/javascript" src="js/jquery.avgrund.js"></script>
 
     <script>
+    var headerTitle = $('#pagepiling .header .title-animate');
     $('.portfolio-item').avgrund();
+    $(function() {
+        $('#pagepiling .header .title-animate').text('[ PROFILE ]');
+        animateHeader('#pagepiling .header .title-animate');
+    });
 
 
     // Pagepiling script
@@ -122,15 +127,25 @@
             sectionsColor: ['#fff','#efefef','#fff'],
             verticalCentered: false,
             menu: '#myMenu',
+            onLeave: function(index, nextIndex, direction) {
+                fadeOutHeader('#pagepiling .header .title-animate');
+            },
             afterLoad: function(anchorLink, index){
                 //using index
+                if(index == 1){
+                    animateLine();
+                    headerTitle.text('[ PROFILE ]');
+                    animateHeader('#pagepiling .header .title-animate');
+                }
                 if(index == 2){
                     animateLine();
-                    animateHeader('#about-section .title-animate')
+                    headerTitle.text('[ ABOUT ME ]');
+                    animateHeader('#pagepiling .header .title-animate');
                 }
                 if(index == 3){
                     animateHorizontal();
-                    animateHeader('#portfolio-section .title-animate')
+                    headerTitle.text('[ PORTFOLIO ]');
+                    animateHeader('#pagepiling .header .title-animate');
                 }
             }
         });
