@@ -145,6 +145,8 @@ a {
   width: 96%;
   max-width: 650px;
   padding: 1em 3em 0 0;
+  font-size: 15px;
+  line-height: 32px;
 }
 #profile-section .blurb {
   border-right: 1px solid #2fa0b5;
@@ -191,7 +193,7 @@ a {
 }
 
 .blurb p {
-  line-height: 32px;
+
 }
 
 .lead-text {
@@ -201,7 +203,7 @@ a {
   margin-top: 0;
 }
 #portfolio-content {
-  padding: 3em 0;
+  padding-top: 3em;
 }
 .minesweeper {
   background: url(../img/minesweeper.png) no-repeat;
@@ -213,8 +215,8 @@ a {
   margin: 0 1%;
   vertical-align: top;
   background-size: 100%;
-  -webkit-transition: background-size .6s ease-in-out, background-position .6s ease-in-out;
-  transition: background-size .6s ease-in-out, background-position .6s ease-in-out;
+  -webkit-transition: background-size .7s ease-in-out, background-position .7s ease-in-out;
+  transition: background-size .7s ease-in-out, background-position .7s ease-in-out;
 }
 #portfolio-content .portfolio-item:first-of-type {
   margin-left: 0;
@@ -226,23 +228,27 @@ a {
   padding-top: 100%;
 }
 .portfolio-item:hover {
-  box-shadow: 4px 4px 4px #aaa;
+  box-shadow: 1px 1px 14px #aaa;
   background-size: 106%;
   background-position: -9px -9px;
+  border: 1px solid #ccc;
 }
 .portfolio-item img {
   width: 300px;
 }
 
-@media (max-width: 900px) {
-  .portfolio-item {
-    width: 200px;
-  }
-  .portfolio-item img {
-    width: 200px;
+@media (max-width: 700px) {
+  .fixed#top-right {
+    right: 5%;
   }
 }
 
-@media (max-width: 750px) {
-
+@media (max-width: 550px) {
+  #pagepiling .inner {
+    padding-top: 30%;
+  }
 }
+
+
+
+
