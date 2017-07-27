@@ -13,6 +13,15 @@ body, h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   letter-spacing: 2px;
 }
+#overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: white;
+  z-index: 6;
+}
 .header {
   /*padding-top: 5%;*/
   /*font-size: 24px;*/
@@ -22,7 +31,6 @@ body, h1, h2, h3, h4, h5, h6 {
   font-family: 'Oxygen';
   font-weight: 600;
   /*margin-bottom: 60px;*/
-  color: #254a4a;
 }
 .header .name {
   font-size: 24px;
@@ -34,6 +42,7 @@ body, h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-size: 16px;
   opacity: .5;
+  color: #2c3e50;
 }
 .header .section-title.title-animate {
   letter-spacing: 5px;
@@ -51,7 +60,7 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 .fixed#top-right {
   top: 6%;
-  right: 14%;
+  right: 12%;
 }
 .fixed ul {
   list-style-type: none;
@@ -120,7 +129,9 @@ h1 {
   letter-spacing: 10px;
   color: #254a4a;
 }
-
+.reveal h1 {
+  opacity: 0;
+}
 a {
   color: #46bde2;
   text-decoration: none;
@@ -136,29 +147,27 @@ a {
   width: 96%;
   padding-right: 15px;
   padding-left: 15px;
-  padding-top: 11em;
+  padding-top: 10em;
   max-width: 970px;
   margin: 0 auto;
 }
 
 .blurb {
   width: 96%;
-  max-width: 650px;
+  max-width: 660px;
   padding: 1em 3em 0 0;
   font-size: 15px;
   line-height: 32px;
 }
-#profile-section .blurb {
-  border-right: 1px solid #2fa0b5;
+#profile-section .blurb p {
+  display: inline-block;
+  width: 97%;
 }
 
 #pagepiling .inner.right-align {
-  margin-top: 4em;
+  margin-top: 6em;
 }
 
-.right-align {
-  padding-bottom: 100px;
-}
 .right-align .blurb {
   vertical-align: top;
   max-width: 580px;
@@ -192,10 +201,6 @@ a {
   text-align: right;
 }
 
-.blurb p {
-
-}
-
 .lead-text {
   display: inline-block;
 }
@@ -203,7 +208,11 @@ a {
   margin-top: 0;
 }
 #portfolio-content {
-  padding-top: 3em;
+  padding-top: 2.5em;
+  padding-bottom: 1.8em;
+}
+#portfolio-section .blurb {
+  padding-top: 0.2em;
 }
 .minesweeper {
   background: url(../img/minesweeper.png) no-repeat;
@@ -211,8 +220,8 @@ a {
 .portfolio-item {
   border-radius: 3px;
   display: inline-block;
-  width: 30%;
-  margin: 0 1%;
+  width: 28%;
+  margin: 0 2%;
   vertical-align: top;
   background-size: 100%;
   -webkit-transition: background-size .7s ease-in-out, background-position .7s ease-in-out;
@@ -248,7 +257,5 @@ a {
     padding-top: 30%;
   }
 }
-
-
 
 

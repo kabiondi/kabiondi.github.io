@@ -34,6 +34,7 @@
 </head>
 
 <body id="top">
+    <div id="overlay"></div>
     <div id="pagepiling">
         <div class="header">
             <div id="top-left" class="fixed header">
@@ -51,49 +52,42 @@
                 </ul>
             </div>
         </div>
+        <!-- PROFILE SECTION -->
         <div id="profile-section" class="section">
             <div class="inner">
-<!--                 <div class="header">Kellen<span>Biondi</span>
-                    <div class="section-title">[ Profile ]</div>
-                </div> -->
                 <img class="profile-img" src="img/profile.png" />
                 <h1 class="mast__title js-spanize">Web</h1>
                 <h1 class="mast__title js-spanize">Application</h1>
                 <h1 class="mast__title js-spanize">Developer</h1>
                 <div class="blurb">
                     <p>Kellen is a front end developer with the skills you want in a lorem ipsum bootstrap making. Responsive design pixel perfect the attention to detail that you demand</p>
+                    <div class="animate-divider"></div>
                 </div>
             </div>
         </div>
+        <!-- ABOUT SECTION -->
         <div id="about-section" class="section">
             <div class="inner right-align">
-<!--                 <div class="header">Kellen<span>Biondi</span>
-                    <div class="section-title title-animate">[ About Me ]</div>
-                </div> -->
-                <!-- <img class="profile-img" src="img/profile.png" /> -->
-                <div class="lead-text">
-                    <h1 class="mast__title js-spanize">Creative</h1>
-                    <h1 class="mast__title js-spanize">Positive</h1>
-                    <h1 class="mast__title js-spanize">Intent</h1>
+                <div class="lead-text reveal">
+                    <h1 class="reveal-first">Creative</h1>
+                    <h1 class="reveal-second">Positive</h1>
+                    <h1 class="reveal-third">Intent</h1>
                 </div>
                 <div class="animate-divider"></div>
-                <div id="clickme" class="blurb">
+                <div class="blurb">
                     <p>A JavaScript programmer, enthusiastic about building web applications, I am particularly interested in client-side development.</p>
                     <p>I'm a passionate musician and a beginner to film making. I love backpacking and creating. The ways people are affected by art and technology are forever inspiring to me and I want to be a part of it.</p>
                 </div>
             </div>
         </div>
+        <!-- PORTFOLIO SECTION -->
         <div id="portfolio-section" class="section">
             <div class="inner">
-<!--                 <div class="header">Kellen<span>Biondi</span>
-                    <div class="section-title title-animate">[ Portfolio ]</div>
-                </div> -->
                 <div id="portfolio-content">
                     <div class="portfolio-item minesweeper"></div>
                     <div class="portfolio-item minesweeper"></div>
                     <div class="portfolio-item minesweeper"></div>
                 </div>
-                <br><br>
                 <div class="horizontal-line"></div>
                 <div class="blurb">
                     <p>Kellen is a front end developer with the skills you want in a lorem ipsum bootstrap making. Responsive design pixel perfect the attention to detail that you demand</p>
@@ -120,17 +114,21 @@
     <script>
     var headerTitle = $('#pagepiling .header .title-animate');
     $('.portfolio-item').avgrund();
+
+
     $(function() {
         $('#pagepiling .header .title-animate').text('[ PROFILE ]');
         animateHeader('#pagepiling .header .title-animate');
+        animateLine('#profile-section', 2000);
+        animateOverlay();
     });
-
 
     // Pagepiling script
     $(function() {
         $('#pagepiling').pagepiling({
             sectionsColor: ['#fff','#efefef','#fff'],
             verticalCentered: false,
+            direction: 'horizontal',
             menu: '#myMenu',
             onLeave: function(index, nextIndex, direction) {
                 fadeOutHeader('#pagepiling .header .title-animate');
@@ -138,14 +136,16 @@
             afterLoad: function(anchorLink, index){
                 //using index
                 if(index == 1){
-                    animateLine();
                     headerTitle.text('[ PROFILE ]');
                     animateHeader('#pagepiling .header .title-animate');
                 }
                 if(index == 2){
-                    animateLine();
+                    animateLine('#about-section', 2500);
                     headerTitle.text('[ ABOUT ME ]');
                     animateHeader('#pagepiling .header .title-animate');
+                    revealText('.reveal-first', 0);
+                    revealText('.reveal-second', 900);
+                    revealText('.reveal-third', 1800);
                 }
                 if(index == 3){
                     animateHorizontal();
@@ -158,6 +158,7 @@
 
 
     // Spanize script
+
     $(function() {
       var s,
       spanizeLetters = {
