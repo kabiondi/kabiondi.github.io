@@ -157,11 +157,15 @@ a {
   max-width: 660px;
   padding: 1em 3em 0 0;
   font-size: 15px;
-  line-height: 32px;
+  line-height: 2.1;
 }
 #profile-section .blurb p {
   display: inline-block;
   width: 97%;
+  color: #2fa0b5;
+}
+.blurb p span {
+  font-weight: 500;
 }
 
 #pagepiling .inner.right-align {
@@ -170,12 +174,25 @@ a {
 
 .right-align .blurb {
   vertical-align: top;
+  width: 62%;
   max-width: 580px;
-  min-height: 160px;
+  /*min-height: 160px;*/
   display: inline-block;
   padding: 0;
-  padding-left: 20px;
+  padding-left: 1.5em;
   border-right: none;
+}
+.right-align .blurb p.about-main {
+  font-weight: 500;
+  color: #2fa0b5;
+}
+.right-align .blurb.about-extra {
+  display: none;
+  width: 100%;
+  max-width: none;
+  margin-top: 2em;
+  line-height: 1.7;
+  padding: 0 3em 0 4em;
 }
 .animate-divider {
   display: inline-block;
@@ -201,10 +218,11 @@ a {
   text-align: right;
 }
 
-.lead-text {
+#about-section .lead-text {
+  padding-top: .3em;
   display: inline-block;
 }
-.lead-text > h1:first-of-type {
+#about-section .lead-text > h1:first-of-type {
   margin-top: 0;
 }
 #portfolio-content {
@@ -242,20 +260,132 @@ a {
   background-position: -9px -9px;
   border: 1px solid #ccc;
 }
-.portfolio-item img {
-  width: 300px;
+
+@media (max-width: 850px) {
+  .right-align .blurb {
+    width: 29em;
+  }
+  .right-align .blurb p.about-extra {
+    display: none;
+    margin: 0;
+  }
+  .right-align .blurb.about-extra {
+    display: block;
+  }
+}
+
+@media (max-width: 750px) {
+  .right-align .blurb.about-extra {
+    padding-left: 3.5em;
+  }
 }
 
 @media (max-width: 700px) {
   .fixed#top-right {
     right: 5%;
   }
+  .right-align .blurb {
+    padding-left: 0.6em;
+  }
+}
+
+@media (max-width: 630px) {
+  #pagepiling .inner.right-align {
+    margin-top: 0.3em;
+  }
+  .right-align h1 {
+    text-align: left;
+  }
+  #about-section .lead-text {
+    margin-bottom: 2em;
+    margin-left: 5%;
+  }
+  .blurb {
+    width: 100%;
+    padding-right: 1em;
+  }
+  .right-align .blurb,
+  .right-align .blurb.about-extra {
+    width: 90%;
+    margin: 0 5%;
+    padding: 0;
+  }
 }
 
 @media (max-width: 550px) {
   #pagepiling .inner {
-    padding-top: 30%;
+    padding-top: 9em;
+  }
+  #about-section .lead-text {
+    margin-left: 2%;
+    margin-bottom: 1em;
+  }
+  .right-align .blurb,
+  .right-align .blurb.about-extra {
+    width: 94%;
+    margin: 0 2%;
   }
 }
 
+/*MAX-HEIGHT MEDIA QUERIES*/
+@media (max-height: 600px) {
+  .portfolio-item {
+    width: 19%;
+  }
+  .profile-img {
+    margin-top: 0.5em;
+  }
+  #profile-section .lead-text {
+    display: inline-block;
+    float: left;
+    margin-right: 15%;
+  }
+  #portfolio-content {
+    padding-top: 1.4em;
+    padding-bottom: 1.7em;
+  }
+}
+
+@media (max-height: 600px) and (min-width: 600px) {
+  #profile-section .lead-text {
+    margin-right: 10em;
+  }
+}
+
+@media (max-height: 600px) and (min-width: 630px) {
+  #pagepiling .inner.right-align {
+    margin-top: 4em;
+  }
+}
+
+@media (max-height: 600px) and (max-width: 500px) {
+  #profile-section .lead-text {
+    margin-right: 1em;
+  }
+}
+
+@media (max-height: 500px) {
+  .portfolio-item {
+    width: 10%;
+  }
+  #pagepiling .inner {
+    padding-top: 7em;
+  }
+}
+
+/*RESPONSIVE EDGE CASES*/
+@media (max-height: 600px) and (max-width: 850px) and (min-width: 630px) {
+  #pagepiling .inner.right-align {
+    padding-top: 7em;
+  }
+}
+
+@media (max-height: 500px) and (max-width: 850px) and (min-width: 630px) {
+  #pagepiling .inner.right-align {
+    padding-top: 4em;
+  }
+  .right-align .blurb.about-extra {
+    margin-top: 1em;
+  }
+}
 

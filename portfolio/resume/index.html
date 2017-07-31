@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Kellen Biondi</title>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- pagepining.css -->
+    <link rel="stylesheet" href="css/jquery.pagepiling.css">
+
+    <!-- avgrund.css -->
+    <link rel="stylesheet" href="css/avgrund.css">
+
+    <!-- Custom CSS -->
+    <link href="css/portfolio.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body id="top">
+    <div class="fixed">
+        <ul>
+            <li><a href="contact">Contact</a></li>
+            <li><div class="menu-divider">or</div></li>
+            <li>
+                <a href="resume">Resumé</a>
+                <div class="underline"></div>
+            </li>
+        </ul>
+    </div>
+    <div id="pagepiling">
+        <div id="profile-section" class="section">
+            <div class="inner">
+                <div class="header">Kellen<span>Biondi</span>
+                    <div class="section-title">[ Profile ]</div>
+                </div>
+                <img class="profile-img" src="img/profile.png" />
+                <h1 class="mast__title js-spanize">Web</h1>
+                <h1 class="mast__title js-spanize">Application</h1>
+                <h1 class="mast__title js-spanize">Developer</h1>
+                <div class="blurb">
+                    <p>Kellen is a front end developer with the skills you want in a lorem ipsum bootstrap making. Responsive design pixel perfect the attention to detail that you demand</p>
+                </div>
+            </div>
+        </div>
+        <div id="about-section" class="section">
+            <div class="inner right-align">
+                <div class="header">Kellen<span>Biondi</span>
+                    <div class="section-title title-animate">[ About Me ]</div>
+                </div>
+                <!-- <img class="profile-img" src="img/profile.png" /> -->
+                <div class="lead-text">
+                    <h1 class="mast__title js-spanize">Creative</h1>
+                    <h1 class="mast__title js-spanize">Positive</h1>
+                    <h1 class="mast__title js-spanize">Intent</h1>
+                </div>
+                <div class="animate-divider"></div>
+                <div id="clickme" class="blurb">
+                    <p>A JavaScript programmer, enthusiastic about building web applications, I am particularly interested in client-side development.</p>
+                    <p>I'm a passionate musician and a beginner to film making. I love backpacking and creating. The ways people are affected by art and technology are forever inspiring to me and I want to be a part of it.</p>
+                </div>
+            </div>
+        </div>
+        <div id="portfolio-section" class="section">
+            <div class="inner">
+                <div class="header">Kellen<span>Biondi</span>
+                    <div class="section-title title-animate">[ Portfolio ]</div>
+                </div>
+                <div class="portfolio-item minesweeper"></div>
+                <div class="portfolio-item minesweeper"></div>
+                <div class="portfolio-item minesweeper"></div>
+                <div class="horizontal-line"></div>
+                <div class="blurb">
+                    <p>Kellen is a front end developer with the skills you want in a lorem ipsum bootstrap making. Responsive design pixel perfect the attention to detail that you demand</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- jquery.pagepiling.min.js -->
+    <script src="js/jquery.pagepiling.min.js"></script>
+
+    <!-- avgrund.js -->
+    <script type="text/javascript" src="js/jquery.avgrund.js"></script>
+
+    <script>
+    $('.portfolio-item').avgrund();
+
+    // Animate line script
+    var animateLine = function () {
+      $( ".animate-divider" ).animate({
+        opacity: 1,
+        height: "170"
+      }, 1000, function() {
+        // Animation complete.
+      });
+    }
+    var animateHorizontal = function () {
+      $( ".horizontal-line" ).animate({
+        opacity: 1,
+        width: "270"
+      }, 1400, function() {
+        // Animation complete.
+      });
+    }
+    var animateHeader = function (element) {
+      $( element ).animate({
+        opacity: .5,
+        letterSpacing: "2"
+      }, 1000, function() {
+        // Animation complete.
+      });
+    }
+
+
+    // Pagepiling script
+    $(document).ready(function() {
+        $('#pagepiling').pagepiling({
+            sectionsColor: ['#fff','#efefef','#fff'],
+            verticalCentered: false,
+            menu: '#myMenu',
+            afterLoad: function(anchorLink, index){
+                //using index
+                if(index == 2){
+                    animateLine();
+                    animateHeader('#about-section .title-animate')
+                }
+                if(index == 3){
+                    animateHorizontal();
+                    animateHeader('#portfolio-section .title-animate')
+                }
+            }
+        });
+    });
+
+
+        // Spanize script
+        (function($) {
+          var s,
+          spanizeLetters = {
+            settings: {
+              letters: $('.js-spanize'),
+            },
+            init: function() {
+              s = this.settings;
+              this.bindEvents();
+            },
+            bindEvents: function(){
+              s.letters.html(function (i, el) {
+                //spanizeLetters.joinChars();
+                var spanizer = $.trim(el).split("");
+                return '<span>' + spanizer.join('</span><span>') + '</span>';
+              });
+            },
+          };
+          spanizeLetters.init();
+          })(jQuery);
+    </script>
+</body>
+
+</html>
