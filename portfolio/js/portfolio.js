@@ -1,20 +1,20 @@
 // Animate out opening overlay
 var animateOverlay = function () {
-  var overlay = $('#overlay');
+  var $overlay = $('#overlay');
   var screenWidth = $(window).width();
-  overlay.animate({
+  $overlay.animate({
     left: screenWidth,
     // opacity: 0.5,
   }, 1500, function() {
-    overlay.remove();
+    $overlay.remove();
   });
 }
 
 // Animate line script
 var animateLine = function (element, speed) {
-  var divider = $( element ).find('.animate-divider');
-  var targetHeight = divider.prev().innerHeight();
-  divider.animate({
+  var $divider = $( element ).find('.animate-divider');
+  var targetHeight = $divider.prev().innerHeight();
+  $divider.animate({
     opacity: 1,
     height: targetHeight
   }, speed, function() {
@@ -24,11 +24,11 @@ var animateLine = function (element, speed) {
 
 // Resize vertical lines to fit sibling divs
 var resizeVerticalLines = function (element) {
-  var divider = $( element ).find('.animate-divider');
+  var $divider = $( element ).find('.animate-divider');
   $(window).resize(function() {
-    var newHeight = divider.prev().innerHeight();
-    if (divider.height() > 1) {
-        divider.animate({
+    var newHeight = $divider.prev().innerHeight();
+    if ($divider.height() > 1) {
+        $divider.animate({
           opacity: 1,
           height: newHeight
         }, 10, function() {
@@ -78,7 +78,6 @@ var revealText = function(element, time) {
     });
   }, time);
 }
-
 
 
 

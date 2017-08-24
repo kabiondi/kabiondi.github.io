@@ -34,6 +34,36 @@
 
 </head>
 
+<!-- background d3 -->
+<style>
+#background-svg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    background-color: #efefef;
+    /*width: 50%;*/
+    /*height: 500px;*/
+}
+
+.links line {
+  stroke: #999;
+  stroke-opacity: 0.6;
+}
+
+.nodes circle {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+</style>
+
+<svg id="background-svg" width="600" height="600"></svg>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="js/site-background-data.js"></script>
+<script src="js/site-background.js"></script>
+<!-- end background d3 -->
+
 <body id="top">
     <div id="overlay"></div>
     <div id="pagepiling">
