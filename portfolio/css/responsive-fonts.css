@@ -1,3 +1,40 @@
+@media(max-width: 900px) {
+	.portfolio-item .portfolio-icon {
+		font-size: 56px;
+	}
+	.portfolio-item {
+		font-size: 14px;
+	}
+	.portfolio-item h3 {
+		font-size: 23px;
+	}
+}
+@media(max-width: 880px) {
+	.portfolio-item .portfolio-icon {
+		font-size: 52px;
+	}
+	.portfolio-item h3 {
+		font-size: 22px;
+	}
+}
+@media(max-width: 860px) {
+	.portfolio-item .portfolio-icon {
+		font-size: 46px;
+	}
+	.portfolio-item h3 {
+		font-size: 21px;
+	}
+}
+@media(max-width: 840px) {
+	.portfolio-item h3 {
+		font-size: 20px;
+	}
+}
+@media(max-width: 820px) {
+	.portfolio-item h3 {
+		font-size: 19px;
+	}
+}
 @media(max-width: 800px) {
 	h1 {
 		font-size: 38px;
