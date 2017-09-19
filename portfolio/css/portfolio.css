@@ -241,8 +241,8 @@ a {
 .minesweeper {
   background: url(../img/minesweeper.png) no-repeat;
 }
-.app-layout {
-  background: url(../img/app-layout.png) no-repeat;
+.hexasynth {
+  background: url(../img/hexasynth.png) no-repeat;
 }
 #alternate-portfolio {
   display: none;
@@ -297,14 +297,14 @@ a {
   bottom: 1.9em;
   z-index: 2;
 }
-.portfolio-item.app-layout h3 {
+.portfolio-item.hexasynth h3 {
   color: #2fa0b5;
 }
 .portfolio-item.minesweeper h3 {
   color: #f05a5d;
 }
 .portfolio-item:hover h3,
-.portfolio-item.app-layout:hover h3,
+.portfolio-item.hexasynth:hover h3,
 .portfolio-item.minesweeper:hover h3 {
   color: #fff;
 }

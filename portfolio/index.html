@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<meta charset="utf-8">
 <html lang="en">
 
 <head>
@@ -14,489 +15,142 @@
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="css/freelancer.css" rel="stylesheet">
+    <!-- pagepining.css -->
+    <link rel="stylesheet" href="css/jquery.pagepiling.css">
 
-    <!-- Kellen CSS -->
+    <!-- avgrund.css -->
+    <link rel="stylesheet" href="css/avgrund.css">
+
+    <!-- Custom CSS -->
     <link href="css/portfolio.css" rel="stylesheet">
+    <link href="css/responsive-fonts.css" rel="stylesheet">
+    <link href="css/spanize.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
 </head>
 
-<body id="page-top" class="index">
+<!-- background d3 -->
+<style>
+#background-svg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    background-color: #efefef;
+    /*width: 50%;*/
+    /*height: 500px;*/
+}
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#page-top">KELLEN<span>BIONDI</span></a>
+.links line {
+  stroke: #999;
+  stroke-opacity: 0.6;
+}
+
+.nodes circle {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+</style>
+
+<!-- <svg id="background-svg" width="600" height="600"></svg> -->
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="js/site-background-data.js"></script>
+<script src="js/site-background.js"></script>
+<!-- end background d3 -->
+
+<body id="top">
+    <div id="overlay"></div>
+    <div id="pagepiling">
+        <div class="header">
+            <div id="top-left" class="fixed header">
+                <div class="name">Kellen<span>Biondi</span></div>
+                <div class="section-title title-animate">[ Profile ]</div>
             </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#about">About</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#contact">Contact</a>
+            <div id="top-right" class="fixed">
+                <ul>
+                    <li><a href="contact">Contact</a></li>
+                    <li><div class="menu-divider">or</div></li>
+                    <li>
+                        <a href="resume">Resumé</a>
+                        <div class="underline"></div>
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <img class="img-responsive" src="img/profile.png" alt="">
-                    <div class="intro-text">
-                        <span class="name">Kellen Biondi</span>
-                        <span class="skills">Web Application Developer</span>
+        <!-- PROFILE SECTION -->
+        <div id="profile-section" class="section">
+            <div class="inner">
+                <img class="profile-img" src="img/profile.png" />
+                <div class="lead-text">
+                    <h1 class="mast__title js-spanize">Web</h1>
+                    <h1 class="mast__title js-spanize">Application</h1>
+                    <h1 class="mast__title js-spanize">Developer</h1>
+                </div>
+                <div class="blurb">
+                    <p><span>Kellen is a front end developer</span> with the skills you want in a lorem ipsum bootstrap making. Responsive design pixel perfect the attention to detail that you demand</p>
+                    <div class="animate-divider"></div>
+                </div>
+            </div>
+        </div>
+        <!-- ABOUT SECTION -->
+        <div id="about-section" class="section">
+            <div class="inner right-align">
+                <div class="lead-text reveal">
+                    <h1 class="reveal-first">Creative</h1>
+                    <h1 class="reveal-second">Positive</h1>
+                    <h1 class="reveal-third">Intent</h1>
+                </div>
+                <div class="animate-divider"></div>
+                <div class="blurb">
+                    <p class="about-main">A JavaScript programmer, enthusiastic about building web applications, I am particularly interested in client-side development.</p>
+                    <p class="about-extra">I'm a passionate musician and a beginner to film making. I love backpacking and creating. The ways people are affected by art and technology are forever inspiring to me and I want to be a part of it.</p>
+                </div>
+                <div class=" blurb about-extra">I'm a passionate musician and a beginner to film making. I love backpacking and creating. The ways people are affected by art and technology are forever inspiring to me and I want to be a part of it.</div>
+            </div>
+        </div>
+        <!-- PORTFOLIO SECTION -->
+        <div id="portfolio-section" class="section">
+            <div class="inner">
+                <div id="portfolio-content">
+                    <div id="alternate-portfolio">
+                        <div class="alternate-title">Hash Slider</div>
+                        <div class="alternate-title">Portfolio</div>
+                        <div class="alternate-title">Minesweeper</div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Portfolio Grid Section -->
-    <section id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Portfolio</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/hash-slider.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/minesweeper.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/bibliothek.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/prompts.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                 <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/threejs.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-           <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/projectr.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="success" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>About</h2>
-                    <hr class="star-light">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
-                    <p>A JavaScript programmer, enthusiastic about building web applications, I am particularly interested in client-side development.</p>
-                </div>
-                <div class="col-lg-4">
-                    <p>I'm a passionate musician and a beginner to film making. I love backpacking and creating. The ways people are affected by art and technology are forever inspiring to me and I want to be a part of it.</p>
-                </div>
-<!--                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="./resume/Resume-Kellen-Biondi.pdf" class="btn btn-lg btn-outline" download>
-                        <i class="fa fa-download"></i> Resumé
-                    </a>
-                </div> -->
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="https://www.linkedin.com/in/kellenbiondi" class="btn btn-lg btn-outline">
-                        <i class="fa fa-linkedin-square"></i> LinkedIn
-                    </a>
-                    <a href="https://github.com/kabiondi" class="btn btn-lg btn-outline">
-                        <i class="fa fa-github-square"></i> GitHub
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Contact Me</h2>
-                    <hr class="star-primary">
-                    <h1><a href="mailto:kellenbiondi@gmail.com">kellenbiondi@gmail.com</a></h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-<!--                     <form name="sentMessage" id="contactForm" novalidate>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Name</label>
-                                <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Email Address</label>
-                                <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Phone Number</label>
-                                <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Message</label>
-                                <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <br>
-                        <div id="success"></div>
-                        <div class="row">
-                            <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-success btn-lg">Send</button>
-                            </div>
-                        </div>
-                    </form> -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="text-center">
-        <!-- <div class="footer-above">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col col-md-4">
-                        <h3>Location</h3>
-                        <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>Around the Web</h3>
-                        <ul class="list-inline">
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
-                            </li>
+                    <div class="portfolio-item data-visualization">
+                        <div class="portfolio-icon">&#xe081;</div>
+                        <h3>Hash Slider</h3>
+                        <div class="portfolio-divider"></div>
+                        <ul class="desc">
+                            <li><span>Data Visualization</span></li>
                         </ul>
                     </div>
-                    <div class="footer-col col-md-4">
-                        <h3>About Freelancer</h3>
-                        <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+                    <div class="portfolio-item hexasynth">
+                        <div class="portfolio-icon">&#xe081;</div>
+                        <h3>HexaSynth</h3>
+                        <div class="portfolio-divider"></div>
+                        <ul class="desc">
+                            <li><span>Web Audio API</span></li>
+                        </ul>
+                    </div>
+                    <div class="portfolio-item minesweeper">
+                        <div class="portfolio-icon">&#xe081;</div>
+                        <h3>Minesweeper</h3>
+                        <div class="portfolio-divider"></div>
+                        <ul class="desc">
+                            <li><span>Node app</span></li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-        </div> -->
-        <div class="footer-below">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        Copyright &copy; Kellen Biondi 2014
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-top page-scroll visible-xs visble-sm">
-        <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
-    </div>
-
-    <!-- Portfolio Modals -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Hash Slider</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/hash-slider.png" class="img-responsive img-centered" alt="">
-                            <p>Hash Slider creates real-time Instagram slideshows for projecting at public events like conferences and parties. This fully responsive application uses the Instagram API to cycle through recent images from a user-defined hashtag. It's built with Node.js, AngularJS, Express, and Cycle2. And, it's hosted on OpenShift!</p>
-                            <ul class="list-inline item-details">
-                                <li>
-                                    <strong><a href="https://github.com/kabiondi/hash-slider">View the code on Github</a></strong>
-                                </li>
-                                    <br>
-                                <li>
-                                    <strong><a href="http://hashslider-kabiondi.rhcloud.com/">Try Hash Slider</a></strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>JavaScript Minesweeper</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/minesweeper.png" class="img-responsive img-centered" alt="">
-                            <p>This is a Minesweeper game that I created with JavaScript. I was able to model the gameplay from the original iconic version with one that runs in HTML/CSS.</p>
-                            <ul class="list-inline item-details">
-                                <li>
-                                    <strong><a href="http://kellenbiondi.com/javascript-mine-puzzle/">Play Minesweeper</a>                                    
-                                    </strong>
-                                </li>
-                                <br>
-                                <li>
-                                    <strong><a href="https://github.com/kabiondi/javascript-mine-puzzle">View the code on Github</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Bibliothek.audio</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/bibliothek.png" class="img-responsive img-centered" alt="">
-                            <p>My band website. This static website makes use of jQuery for the responsive design and home page animations. The iframes automatically resize thanks to a module called FitVids.js. Side note: I made all of the music and video for the project.</p>
-                            <ul class="list-inline item-details">
-                                <li>Check it out:<br>
-                                    <strong><a href="http://bibliotheque.audio">Bibliothek.audio</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Creativity Prompts</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/prompts.png" class="img-responsive img-centered" alt="">
-                            <p>Creativity Prompts is a Heroku-hosted MEAN stack application for breaking through creativity blocks. Users can input useful prompts and view them randomly to spark creative solutions by inspiring alternate approaches.</p>
-                            <ul class="list-inline item-details">
-                                <li>
-                                    <strong><a href="https://creativityprompts.herokuapp.com">Try the demo on Heroku!</a>
-                                    </strong>
-                                </li>
-                                <br>
-                                <li>
-                                    <strong><a href="https://github.com/kabiondi/creativity-prompts">View the code on Github</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/threejs.png" class="img-responsive img-centered" alt="">
-                            <p>An experiement with the Three.js OrbitControls module. This demo makes use of WebGL to insert the 3D object into HTML and make it interactive. I used Blender to make the 3D model.</p>
-                            <ul class="list-inline item-details">
-                                <li>
-                                    <strong><a href="http://kellenbiondi.com/threejs-OrbitControls/">Try it out</a>
-                                    </strong>
-                                </li>
-                                <br>
-                                <li>
-                                    <strong><a href="https://github.com/kabiondi/threejs-OrbitControls">View the code on Github</a>
-                                    </strong>
-                                </li>
-
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project R</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/projectr.png" class="img-responsive img-centered" alt="">
-                            <p>Project R is a slideshow app for instagram images. I originally wrote the client-side code now found in Hash Slider for this project. Made as part of a team of four, Project R uses jQuery, Backbone.js, Node.js, Express, and Orchestrate.</p>
-                            <ul class="list-inline item-details">
-                                <li>
-                                    <strong><a href="https://github.com/pcs-groupProject/template">View the code on Github</a></strong>
-                                </li>
-                                    <br>
-                                <li>
-                                    <strong><a href="http://projectr.herokuapp.com/">Try Project R</a></strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
+                <div class="horizontal-line"></div>
+                <div class="blurb">
+                    <p><span>Kellen is a front end developer</span> with the skills you want in a lorem ipsum bootstrap making. Responsive design pixel perfect the attention to detail that you demand</p>
                 </div>
             </div>
         </div>
@@ -508,18 +162,84 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.js"></script>
+    <!-- jquery.pagepiling.min.js -->
+    <script src="js/jquery.pagepiling.min.js"></script>
 
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    <!-- portfolio.js -->
+    <script type="text/javascript" src="js/portfolio.js"></script>
 
-    <!-- Custom Theme JavaScript -->
-    <script src="js/freelancer.js"></script>
+    <!-- avgrund.js -->
+    <script type="text/javascript" src="js/jquery.avgrund.js"></script>
 
+    <script>
+    var headerTitle = $('#pagepiling .header .title-animate');
+    $('.portfolio-item').avgrund();
+
+
+    $(function() {
+        $('#pagepiling .header .title-animate').text('[ PROFILE ]');
+        animateHeader('#pagepiling .header .title-animate');
+        animateLine('#profile-section', 2000);
+        animateOverlay();
+    });
+
+    // Pagepiling script
+    $(function() {
+        $('#pagepiling').pagepiling({
+            sectionsColor: ['#fff','#efefef','#fff'],
+            verticalCentered: false,
+            direction: 'horizontal',
+            menu: '#myMenu',
+            onLeave: function(index, nextIndex, direction) {
+                fadeOutHeader('#pagepiling .header .title-animate');
+            },
+            afterLoad: function(anchorLink, index){
+                //using index
+                if(index == 1){
+                    headerTitle.text('[ PROFILE ]');
+                    animateHeader('#pagepiling .header .title-animate');
+                }
+                if(index == 2){
+                    animateLine('#about-section', 2500);
+                    headerTitle.text('[ ABOUT ME ]');
+                    animateHeader('#pagepiling .header .title-animate');
+                    revealText('.reveal-first', 0);
+                    revealText('.reveal-second', 900);
+                    revealText('.reveal-third', 1800);
+                }
+                if(index == 3){
+                    animateHorizontal();
+                    headerTitle.text('[ PORTFOLIO ]');
+                    animateHeader('#pagepiling .header .title-animate');
+                }
+            }
+        });
+    });
+
+
+    // Spanize script
+
+    $(function() {
+      var s,
+      spanizeLetters = {
+        settings: {
+          letters: $('.js-spanize'),
+        },
+        init: function() {
+          s = this.settings;
+          this.bindEvents();
+        },
+        bindEvents: function(){
+          s.letters.html(function (i, el) {
+            //spanizeLetters.joinChars();
+            var spanizer = $.trim(el).split("");
+            return '<span>' + spanizer.join('</span><span>') + '</span>';
+          });
+        },
+      };
+      spanizeLetters.init();
+      });
+    </script>
 </body>
 
 </html>
