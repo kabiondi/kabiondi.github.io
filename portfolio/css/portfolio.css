@@ -478,6 +478,9 @@ a {
     width: 94%;
     margin: 0 2%;
   }
+  .horizontal-line {
+    max-width: 300px;
+  }
 }
 
 /*MAX-HEIGHT MEDIA QUERIES*/
@@ -514,6 +517,36 @@ a {
 @media (max-height: 600px) and (max-width: 500px) {
   #profile-section .lead-text {
     margin-right: 1em;
+  }
+}
+
+@media (max-height: 560px) and (max-width: 420px) {
+  #pagepiling .inner {
+    padding-top: 8em;
+    width: 98%;
+  }
+  #about-section .lead-text {
+    margin-bottom: 0.9em;
+  }
+  .about-main {
+    line-height: 1.8;
+  }
+  #portfolio-content {
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+}
+  #portfolio-content .portfolio-item,
+  #portfolio-content .portfolio-item:first-of-type {
+    height: 60px;
+    width: 60px;
+  }
+  #alternate-portfolio .alternate-title {
+    height: 60px;
+    margin-top: 5px;
+    padding: 15px 0;
+  }
+  .animate-divider {
+    max-height: 150px;
   }
 }
 
