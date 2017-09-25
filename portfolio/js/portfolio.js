@@ -1,3 +1,27 @@
+// Show contact info
+var showContact = function () {
+  var $contactButton = $('.contact-btn');
+  var $contactDropdown = $('#contact-dropdown');
+  $contactButton.click(function(e) {
+    e.preventDefault();
+    $contactDropdown.addClass('show-contact');
+    $('.close-contact').click(hideContact);
+    $(document).click(function(event) { 
+      if(!$(event.target).closest('#contact-dropdown').length) {
+        // hideContact();
+      }        
+    });
+  });
+}
+
+// Hide contact info
+var hideContact = function () {
+  var $contactDropdown = $('#contact-dropdown');
+  if ($contactDropdown.hasClass('show-contact')) {
+    $contactDropdown.removeClass('show-contact');
+  }
+}
+
 // Animate out opening overlay
 var animateOverlay = function () {
   var $overlay = $('#overlay');

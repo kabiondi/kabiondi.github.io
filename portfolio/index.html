@@ -14,6 +14,7 @@
 
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- pagepining.css -->
     <link rel="stylesheet" href="css/jquery.pagepiling.css">
@@ -26,47 +27,31 @@
     <link href="css/responsive-fonts.css" rel="stylesheet">
     <link href="css/spanize.css" rel="stylesheet">
 
-    <!-- Custom Fonts -->
-    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
 
 </head>
 
-<!-- background d3 -->
-<style>
-#background-svg {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 4;
-    background-color: #efefef;
-    /*width: 50%;*/
-    /*height: 500px;*/
-}
-
-.links line {
-  stroke: #999;
-  stroke-opacity: 0.6;
-}
-
-.nodes circle {
-  stroke: #fff;
-  stroke-width: 1.5px;
-}
-
-</style>
-
 <!-- <svg id="background-svg" width="600" height="600"></svg> -->
 <script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="js/site-background-data.js"></script>
-<script src="js/site-background.js"></script>
+<!-- <script src="js/site-background-data.js"></script> -->
+<!-- <script src="js/site-background.js"></script> -->
 <!-- end background d3 -->
 
 <body id="top">
     <div id="overlay"></div>
     <div id="pagepiling">
+        <div id="contact-dropdown">
+            <div class="info">
+                <p><i class="fa fa-envelope" aria-hidden="true"></i> kellenbiondi@gmail.com</p>
+                <div class="contact-ul-wrap">
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/kellenbiondi/"><i class="fa fa-linkedin social-links" aria-hidden="true"></i></a></li>
+                        <li><a href="https://github.com/kabiondi"><i class="fa fa-github social-links" aria-hidden="true"></i></a></li>
+                        <li><a href="https://codepen.io/kabiondi/"><i class="fa fa-codepen social-links" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="close-contact"><i class="glyphicon glyphicon-chevron-up"></i></div>
+        </div>
         <div class="header">
             <div id="top-left" class="fixed header">
                 <div class="name">Kellen<span>Biondi</span></div>
@@ -74,10 +59,10 @@
             </div>
             <div id="top-right" class="fixed">
                 <ul>
-                    <li><a href="contact">Contact</a></li>
+                    <li class="contact-btn"><a href="">Contact</a></li>
                     <li><div class="menu-divider">or</div></li>
                     <li>
-                        <a href="resume">Resumé</a>
+                        <a href="resume/index.html">Resumé</a>
                         <div class="underline"></div>
                     </li>
                 </ul>
@@ -93,7 +78,7 @@
                     <h1 class="mast__title js-spanize">Developer</h1>
                 </div>
                 <div class="blurb">
-                    <p><span>Kellen is a front end developer</span> with the skills you want in a lorem ipsum bootstrap making. Responsive design pixel perfect the attention to detail that you demand</p>
+                    <p><span>Kellen is a front end developer</span> with the skills you want in a lorem ipsum bootstrap making. Responsive design pixel perfect the attention to detail that blah</p>
                     <div class="animate-divider"></div>
                 </div>
             </div>
@@ -109,9 +94,9 @@
                 <div class="animate-divider"></div>
                 <div class="blurb">
                     <p class="about-main">A JavaScript programmer, enthusiastic about building web applications, I am particularly interested in client-side development.</p>
-                    <p class="about-extra">I'm a passionate musician and a beginner to film making. I love backpacking and creating. The ways people are affected by art and technology are forever inspiring to me and I want to be a part of it.</p>
+                    <p class="about-extra">I'm a passionate musician and a beginner to film making. I love backpacking and creating. The ways people are affected by art and technology blah blah.</p>
                 </div>
-                <div class=" blurb about-extra">I'm a passionate musician and a beginner to film making. I love backpacking and creating. The ways people are affected by art and technology are forever inspiring to me and I want to be a part of it.</div>
+                <div class=" blurb about-extra">I'm a passionate musician and a beginner to film making. I love backpacking and creating. The ways people are affected by art and technology blah blah.</div>
             </div>
         </div>
         <!-- PORTFOLIO SECTION -->
@@ -150,7 +135,7 @@
                 </div>
                 <div class="horizontal-line"></div>
                 <div class="blurb">
-                    <p><span>Kellen is a front end developer</span> with the skills you want in a lorem ipsum bootstrap making. Responsive design pixel perfect the attention to detail that you demand</p>
+                    <p><span>Kellen is a front end developer</span> with the skills you want in a lorem ipsum bootstrap making. Responsive design pixel perfect the attention to detail.</p>
                 </div>
             </div>
         </div>
@@ -181,6 +166,7 @@
         animateHeader('#pagepiling .header .title-animate');
         animateLine('#profile-section', 2000);
         animateOverlay();
+        showContact();
     });
 
     // Pagepiling script

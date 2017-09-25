@@ -12,170 +12,158 @@
     <title>Kellen Biondi</title>
 
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- pagepining.css -->
-    <link rel="stylesheet" href="css/jquery.pagepiling.css">
+    <!-- <link rel="stylesheet" href="../css/jquery.pagepiling.css"> -->
 
     <!-- avgrund.css -->
-    <link rel="stylesheet" href="css/avgrund.css">
+    <!-- <link rel="stylesheet" href="../css/avgrund.css"> -->
 
     <!-- Custom CSS -->
-    <link href="css/portfolio.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
+    <!-- <link href="../css/portfolio.css" rel="stylesheet"> -->
+    <link href="../css/resume.css" rel="stylesheet">
 
 </head>
 
-<body id="top">
-    <div class="fixed">
-        <ul>
-            <li><a href="contact">Contact</a></li>
-            <li><div class="menu-divider">or</div></li>
-            <li>
-                <a href="resume">Resumé</a>
-                <div class="underline"></div>
-            </li>
-        </ul>
-    </div>
-    <div id="pagepiling">
-        <div id="profile-section" class="section">
-            <div class="inner">
-                <div class="header">Kellen<span>Biondi</span>
-                    <div class="section-title">[ Profile ]</div>
-                </div>
-                <img class="profile-img" src="img/profile.png" />
-                <h1 class="mast__title js-spanize">Web</h1>
-                <h1 class="mast__title js-spanize">Application</h1>
-                <h1 class="mast__title js-spanize">Developer</h1>
-                <div class="blurb">
-                    <p>Kellen is a front end developer with the skills you want in a lorem ipsum bootstrap making. Responsive design pixel perfect the attention to detail that you demand</p>
-                </div>
+<body>
+    <a href="../index.html"><div id="return-home"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Back</div></a>
+    <div class="resume-header">
+        <div class="header-inner">
+            <div class="resume-left">
+                <h1>Kellen <span>Biondi</span></h1>
+                <h4>Javascript Developer</h4>
             </div>
-        </div>
-        <div id="about-section" class="section">
-            <div class="inner right-align">
-                <div class="header">Kellen<span>Biondi</span>
-                    <div class="section-title title-animate">[ About Me ]</div>
-                </div>
-                <!-- <img class="profile-img" src="img/profile.png" /> -->
-                <div class="lead-text">
-                    <h1 class="mast__title js-spanize">Creative</h1>
-                    <h1 class="mast__title js-spanize">Positive</h1>
-                    <h1 class="mast__title js-spanize">Intent</h1>
-                </div>
-                <div class="animate-divider"></div>
-                <div id="clickme" class="blurb">
-                    <p>A JavaScript programmer, enthusiastic about building web applications, I am particularly interested in client-side development.</p>
-                    <p>I'm a passionate musician and a beginner to film making. I love backpacking and creating. The ways people are affected by art and technology are forever inspiring to me and I want to be a part of it.</p>
-                </div>
-            </div>
-        </div>
-        <div id="portfolio-section" class="section">
-            <div class="inner">
-                <div class="header">Kellen<span>Biondi</span>
-                    <div class="section-title title-animate">[ Portfolio ]</div>
-                </div>
-                <div class="portfolio-item minesweeper"></div>
-                <div class="portfolio-item minesweeper"></div>
-                <div class="portfolio-item minesweeper"></div>
-                <div class="horizontal-line"></div>
-                <div class="blurb">
-                    <p>Kellen is a front end developer with the skills you want in a lorem ipsum bootstrap making. Responsive design pixel perfect the attention to detail that you demand</p>
-                </div>
+            <div class="resume-right">
+                <p>Portland, Oregon</p>
+                <p><i class="fa fa-envelope" aria-hidden="true"></i> kellenbiondi@gmail.com</p>
+                <a href="https://www.linkedin.com/in/kellenbiondi/"><i class="fa fa-linkedin social-links" aria-hidden="true"></i></a>
+                <a href="https://github.com/kabiondi"><i class="fa fa-github social-links" aria-hidden="true"></i></a>
+                <a href="https://codepen.io/kabiondi/"><i class="fa fa-codepen social-links" aria-hidden="true"></i></a>
             </div>
         </div>
     </div>
+    <div class="resume-container">
+        <div class="resume-section about-section">
+            <div class="section-title">About Me</div>
+            <div class="section-row">
+                <div class="resume-section-left">
+                    <img class="profile-img" src="../img/profile.png" />
+                </div>
+                <div class="resume-section-right">
+                    <span>I’m a Positive and Enthusiastic Front End Developer from Portland, Oregon. I find myself constantly interested in creating well thought out user experiences that are comfortable and beautiful. After the code is tested and optimized I believe it should feel right, leaving the user delighted and I’m inspired by the diverse problem solving involved to that end.</span>
+                </div>
+            </div>
+        </div>
+        <div class="resume-section tech-section">
+            <div class="section-title">Technical Skills</div>
+            <div class="section-row">
+                <div class="resume-section-left">
+                    <p><strong>Languages</strong></p>
+                </div>
+                <div class="resume-section-right">
+                    <span>JavaScript</span>
+                    <span>Python</span> 
+                </div>
+            </div>
+            <div class="section-row">
+                <div class="resume-section-left">
+                    <p><strong>DB/deployment</strong></p>
+                </div>
+                <div class="resume-section-right">
+                    <span>Mysql</span>
+                    <span>NGINX</span>
+                    <span>uWSGI</span>
+                    <span>Flask</span>
+                    <span>Django</span>
+                    <span>NodeJS</span>
+                </div>
+            </div>
+            <div class="section-row">
+                <div class="resume-section-left">
+                    <p><strong>Web</strong></p>
+                </div>
+                <div class="resume-section-right">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>jQuery</span>
+                    <span>SASS/LESS</span>
+                    <span>Bootstrap/Foundation</span>
+                    <span>VueJS</span>
+                </div>
+            </div>
+            <div class="section-row">
+                <div class="resume-section-left">
+                    <p><strong>Design</strong></p>
+                </div>
+                <div class="resume-section-right">
+                    <span>Photoshop</span>
+                    <span>Illustrator</span>
+                </div>
+            </div>
+            <div class="section-row">
+                <div class="resume-section-left">
+                    <p><strong>Other</strong></p>
+                </div>
+                <div class="resume-section-right">
+                    <span>Git</span>
+                    <span>Grunt/Gulp</span>
+                </div>
+            </div>
+        </div>
+        <div class="resume-section">
+            <div class="section-title">Experience</div>
+            <div class="section-row">
+                <div class="resume-section-left">
+                    <span>2015 - PRESENT</span>
+                </div>
+                <div class="resume-section-right">
+                    <p class="section-header"><strong>Developer - </strong>[ Parthenon Software ]</p>
+                    <p><span>Development of web sites, chromebook apps, and other web products for clients. I work with many different technologies beyond front end including a handful of full-stack projects.</span></p>
+                </div>
+            </div>
+            <div class="section-row">
+                <div class="resume-section-left">
+                    <span>2008 - 2014</span>
+                </div>
+                <div class="resume-section-right">
+                    <p class="section-header"><strong>Financial Analyst - </strong>[ Boeing ]</p>
+                    <p><span>Analysis of various financial and performance data. I developed forecasts of roughly $100M in annual cost, maintained risks and opportunities to the target, and created reports to identify and explain variances.</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="resume-section">
+            <div class="section-title">Education</div>
+            <div class="section-row">
+                <div class="resume-section-left">
+                    <span>2015 - PRESENT</span>
+                </div>
+                <div class="resume-section-right">
+                    <p class="section-header"><strong>Portland Code School</strong></p>
+                    <p><span>Full-Stack Javascript</span></p>
+                </div>
+            </div>
+            <div class="section-row">
+                <div class="resume-section-left">
+                    <span>2008 - 2014</span>
+                </div>
+                <div class="resume-section-right">
+                    <p class="section-header"><strong>Southern Oregon University</strong></p>
+                    <p><span>Bachelor of Science, Business Administration - Economics</span></p>
+                    <p><span>Certificate in Applied Finance and Economics</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="../js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 
-    <!-- jquery.pagepiling.min.js -->
-    <script src="js/jquery.pagepiling.min.js"></script>
-
-    <!-- avgrund.js -->
-    <script type="text/javascript" src="js/jquery.avgrund.js"></script>
-
-    <script>
-    $('.portfolio-item').avgrund();
-
-    // Animate line script
-    var animateLine = function () {
-      $( ".animate-divider" ).animate({
-        opacity: 1,
-        height: "170"
-      }, 1000, function() {
-        // Animation complete.
-      });
-    }
-    var animateHorizontal = function () {
-      $( ".horizontal-line" ).animate({
-        opacity: 1,
-        width: "270"
-      }, 1400, function() {
-        // Animation complete.
-      });
-    }
-    var animateHeader = function (element) {
-      $( element ).animate({
-        opacity: .5,
-        letterSpacing: "2"
-      }, 1000, function() {
-        // Animation complete.
-      });
-    }
-
-
-    // Pagepiling script
-    $(document).ready(function() {
-        $('#pagepiling').pagepiling({
-            sectionsColor: ['#fff','#efefef','#fff'],
-            verticalCentered: false,
-            menu: '#myMenu',
-            afterLoad: function(anchorLink, index){
-                //using index
-                if(index == 2){
-                    animateLine();
-                    animateHeader('#about-section .title-animate')
-                }
-                if(index == 3){
-                    animateHorizontal();
-                    animateHeader('#portfolio-section .title-animate')
-                }
-            }
-        });
-    });
-
-
-        // Spanize script
-        (function($) {
-          var s,
-          spanizeLetters = {
-            settings: {
-              letters: $('.js-spanize'),
-            },
-            init: function() {
-              s = this.settings;
-              this.bindEvents();
-            },
-            bindEvents: function(){
-              s.letters.html(function (i, el) {
-                //spanizeLetters.joinChars();
-                var spanizer = $.trim(el).split("");
-                return '<span>' + spanizer.join('</span><span>') + '</span>';
-              });
-            },
-          };
-          spanizeLetters.init();
-          })(jQuery);
-    </script>
 </body>
 
 </html>
