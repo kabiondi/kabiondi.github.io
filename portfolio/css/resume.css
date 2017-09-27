@@ -92,11 +92,20 @@ h4 {
 .section-row {
 	margin-bottom: 1em;
 }
+.section-row strong {
+	font-size: 110%;
+}
+.section-row i {
+	color: #777;
+}
 .section-header {
 	margin-bottom: 0.2em;
 }
 .tech-section .section-row {
 	margin-bottom: 0.5em;
+}
+.education-section .section-row p {
+	margin-bottom: 0.2em;
 }
 .resume-section-left {
 	display: inline-block;
@@ -141,6 +150,18 @@ h4 {
 }
 
 @media (max-width: 740px) {
+	h1 {
+		font-size: 40px;
+	}
+	.section-row {
+		margin-bottom: 1.6em;
+	}
+	.tech-section .section-row {
+		margin-bottom: 1.2em;
+	}
+	.tech-section .section-row p {
+		margin-bottom: 0;
+	}
 	.resume-left {
 		display: block;
 		width: auto;
@@ -149,6 +170,10 @@ h4 {
 		display: block;
 		width: auto;
 		text-align: left;
+		margin-top: 1.5em;
+	}
+	.resume-right p {
+		margin-bottom: 0.2em;
 	}
 	.resume-section-left,
 	.resume-section-right {
@@ -157,9 +182,12 @@ h4 {
 		width: 100%;
 	}
 	.resume-section-right {
-		margin: 0.5em 0 2em;
+		margin: 0.2em 0;
 	}
 	.resume-section.about-section .resume-section-left {
-		margin-bottom: 1em;
+		margin-bottom: 2em;
+	}
+	.section-header {
+		margin-bottom: 0.5em;
 	}
 }
