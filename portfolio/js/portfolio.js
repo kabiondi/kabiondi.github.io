@@ -6,11 +6,6 @@ var showContact = function () {
     e.preventDefault();
     $contactDropdown.addClass('show-contact');
     $('.close-contact').click(hideContact);
-    $(document).click(function(event) { 
-      if(!$(event.target).closest('#contact-dropdown').length) {
-        // hideContact();
-      }        
-    });
   });
 }
 
@@ -20,6 +15,15 @@ var hideContact = function () {
   if ($contactDropdown.hasClass('show-contact')) {
     $contactDropdown.removeClass('show-contact');
   }
+}
+
+// Close contact info on click elsewhere
+var closeOnClickAway = function () {
+  $(document).click(function(event) {
+      if(!$(event.target).closest('#contact-dropdown').length && !$(event.target).closest('.contact-btn').length) {
+        hideContact();
+      }
+  });
 }
 
 // Animate out opening overlay

@@ -37,7 +37,7 @@ body, h1, h2, h3, h4, h5, h6 {
   letter-spacing: 1px;
   z-index: 10;
   top: 0;
-  right: 7%;
+  right: 6%;
   background-color: #2fa0b5;
   text-transform: none;
   opacity: 0;
@@ -48,6 +48,7 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 #contact-dropdown .info {
   padding: 1em 2em;
+  text-align: center;
 }
 #contact-dropdown .contact-ul-wrap {
   text-align: center;
@@ -458,6 +459,9 @@ a {
 }
 
 @media (max-width: 850px) {
+  #contact-dropdown {
+    right: 5%;
+  }
   .right-align .blurb {
     width: 29em;
   }
@@ -514,6 +518,9 @@ a {
 }
 
 @media (max-width: 630px) {
+  #contact-dropdown {
+    right: 4%;
+  }
   #pagepiling .inner.right-align {
     margin-top: 0.3em;
   }
@@ -537,6 +544,12 @@ a {
 }
 
 @media (max-width: 550px) {
+  #contact-dropdown {
+    width: 92%;
+  }
+  #contact-dropdown .close-contact {
+    border-color: #2fa0b5;
+  }
   #pagepiling .inner {
     padding-top: 9em;
   }
