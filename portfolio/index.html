@@ -19,9 +19,6 @@
     <!-- pagepining.css -->
     <link rel="stylesheet" href="css/jquery.pagepiling.css">
 
-    <!-- avgrund.css -->
-    <link rel="stylesheet" href="css/avgrund.css">
-
     <!-- Custom CSS -->
     <link href="css/portfolio.css" rel="stylesheet">
     <link href="css/responsive-fonts.css" rel="stylesheet">
@@ -105,10 +102,11 @@
                 <div id="portfolio-content">
                     <div id="alternate-portfolio">
                         <div class="alternate-title">Hash Slider</div>
-                        <div class="alternate-title">Portfolio</div>
+                        <div class="alternate-title">HexaSynth</div>
                         <div class="alternate-title">Minesweeper</div>
                     </div>
                     <div class="portfolio-item data-visualization">
+                        <button class="modal-open portfolio-overlay" data-toggle="modal" data-target="#firstPortfolioItem"></button>
                         <div class="portfolio-icon">&#xe081;</div>
                         <h3>Hash Slider</h3>
                         <div class="portfolio-divider"></div>
@@ -117,6 +115,7 @@
                         </ul>
                     </div>
                     <div class="portfolio-item hexasynth">
+                        <button class="portfolio-overlay" data-toggle="modal" data-target="#secondPortfolioItem"></button>
                         <div class="portfolio-icon">&#xe081;</div>
                         <h3>HexaSynth</h3>
                         <div class="portfolio-divider"></div>
@@ -125,6 +124,7 @@
                         </ul>
                     </div>
                     <div class="portfolio-item minesweeper">
+                        <button class="portfolio-overlay" data-toggle="modal" data-target="#thirdPortfolioItem"></button>
                         <div class="portfolio-icon">&#xe081;</div>
                         <h3>Minesweeper</h3>
                         <div class="portfolio-divider"></div>
@@ -139,7 +139,65 @@
                 </div>
             </div>
         </div>
-    </div>
+        <!-- modals -->
+        <div class="modal fade" id="firstPortfolioItem" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Hash Slider</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="secondPortfolioItem" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">HexaSynth</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="thirdPortfolioItem" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Hash Slider</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-backdrop"></div>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -153,13 +211,8 @@
     <!-- portfolio.js -->
     <script type="text/javascript" src="js/portfolio.js"></script>
 
-    <!-- avgrund.js -->
-    <script type="text/javascript" src="js/jquery.avgrund.js"></script>
-
     <script>
     var headerTitle = $('#pagepiling .header .title-animate');
-    $('.portfolio-item').avgrund();
-
 
     $(function() {
         $('#pagepiling .header .title-animate').text('[ PROFILE ]');
