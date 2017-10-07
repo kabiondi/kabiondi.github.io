@@ -28,6 +28,9 @@ body, h1, h2, h3, h4, h5, h6 {
 a {
   color: #2fa0b5;
 }
+.center-child {
+  text-align: center;
+}
 #overlay {
   position: absolute;
   left: 0;
@@ -502,8 +505,13 @@ a {
 .modal-body img {
   width: 100%;
 }
+.demo-row {
+  margin-bottom: 1em;
+  margin-top: 2em;
+}
 .modal-body .demo-btn {
-  display: block;
+  position: relative;
+  display: inline-block;
   width: 10em;
   text-align: center;
   margin: 0 auto;
@@ -512,6 +520,35 @@ a {
   border-radius: 3px;
   text-decoration: none;
   font-weight: 500;
+}
+.modal-body .demo-btn:hover:before {
+  transform-origin: center bottom;
+  transition: transform .25s ease;
+  transform: scale3d(1, 1, 1);
+}
+.modal-body .demo-btn:before {
+  content: '';
+  background-color: #2fa0b5;
+  transform: scale3d(1, 0, 1);
+  transition: transform .25s ease;
+  transform-origin: center bottom;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.btn-span-inner {
+  position: relative;
+  transition: color .25s ease;
+  -webkit-transition: color .25s ease;
+}
+a:hover .btn-span-inner {
+  color: #fff;
+}
+.modal-body .source-btn {
+  text-align: center;
+  text-decoration: none;
 }
 
 @media (max-width: 900px) {
