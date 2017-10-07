@@ -15,6 +15,11 @@
     src: url('../fonts/glyphicons-halflings-regular.eot');
     src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
 }
+@font-face {
+    font-family: 'Font Awesome';
+    src: url('../font-awesome-4.1.0/fonts/fontawesome-webfont.eot');
+    src: url('../font-awesome-4.1.0/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), url('../font-awesome-4.1.0/fonts/fontawesome-webfont.woff') format('woff'), url('../font-awesome-4.1.0/fonts/fontawesome-webfont.ttf') format('truetype'), url('../font-awesome-4.1.0/fonts/fontawesome-webfont.svg#fontawesomeregular') format('svg');
+}
 
 html {
   overflow: hidden;
@@ -27,6 +32,9 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 a {
   color: #2fa0b5;
+}
+a:hover {
+  color: #217382;
 }
 .center-child {
   text-align: center;
@@ -116,6 +124,7 @@ a {
   font-weight: 600;
 }
 .header .name {
+  color: #3b5269;
   font-size: 24px;
 }
 .header span {
@@ -150,10 +159,19 @@ a {
 .fixed ul li {
   text-align: center;
   margin: 2px;
-  padding: 3px 0;
+  /*padding: 3px 0;*/
   font-weight: 600;
 }
-.fixed ul li:first-of-type {
+.fixed ul li.contact-btn {
+  border-color: #f05a5d;
+  background-color: #f05a5d;
+  border: none;
+  padding: 0.25em 0.45em;
+}
+.fixed ul li.contact-btn .fill-span-inner {
+  color: #fff;
+}
+/*.fixed ul li:first-of-type {
   min-width: 100px;
   background-color: #f05a5d;
   border: 1px solid #f05a5d;
@@ -161,12 +179,12 @@ a {
   margin-bottom: 6px;
   -webkit-transition: color .4s, background-color .4s, border-color .4s ease-in;
   transition: color .4s, background-color .4s, border-color .4s ease-in;
-}
+}*/
 .fixed ul li:hover {
   color: #232323;
-  background-color: #fff;
+  /*background-color: transparent;*/
   cursor: pointer;
-  border-color: #ddd;
+  /*border-color: #ddd;*/
 }
 .fixed ul li:last-of-type {
   text-transform: none;
@@ -368,7 +386,8 @@ a {
   font-weight: 700;
   font-size: 24px;
   letter-spacing: 1px;
-  font-family: 'Kanit';
+  font-family: 'Montserrat';
+  opacity: 0.8;
   color: #fff;
   /*text-transform: none;*/
   bottom: 0em;
@@ -384,6 +403,7 @@ a {
   padding-left: 1.5em;
   bottom: 1.9em;
   z-index: 2;
+  opacity: 1;
 }
 /*.portfolio-item.hexasynth h3 {
   color: #2fa0b5;
@@ -400,7 +420,7 @@ a {
   display: none;
   z-index: 2;
   font-size: 16px;
-  font-family: 'Glyphicons Halflings';
+  font-family: 'Font Awesome';
   position: absolute;
   /*background-color: #fff;*/
   /*color: #2fa0b5;*/
@@ -476,6 +496,7 @@ a {
   transform-origin: 100%;
 }
 .portfolio-overlay {
+  cursor: pointer;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -509,24 +530,34 @@ a {
   margin-bottom: 1em;
   margin-top: 2em;
 }
-.modal-body .demo-btn {
+.demo-row a:hover,
+.demo-row a:focus {
+  color: #2fa0b5;
+}
+.demo-row .fill-btn {
+  padding: 0.5em 3em;
+}
+
+/* BUTTONS */
+
+.fill-btn {
   position: relative;
   display: inline-block;
-  width: 10em;
+  /*width: 10em;*/
   text-align: center;
   margin: 0 auto;
   border: 2px solid #2fa0b5;
-  padding: 0.4em 1em;
-  border-radius: 3px;
+  padding: 0.2em 0.4em;
+  /*border-radius: 2px;*/
   text-decoration: none;
   font-weight: 500;
 }
-.modal-body .demo-btn:hover:before {
+.fill-btn:hover:before {
   transform-origin: center bottom;
   transition: transform .25s ease;
   transform: scale3d(1, 1, 1);
 }
-.modal-body .demo-btn:before {
+.fill-btn:before {
   content: '';
   background-color: #2fa0b5;
   transform: scale3d(1, 0, 1);
@@ -538,17 +569,21 @@ a {
   width: 100%;
   height: 100%;
 }
-.btn-span-inner {
+.fill-span-inner {
   position: relative;
   transition: color .25s ease;
   -webkit-transition: color .25s ease;
 }
-a:hover .btn-span-inner {
+a:hover .fill-span-inner {
   color: #fff;
 }
 .modal-body .source-btn {
   text-align: center;
   text-decoration: none;
+  text-transform: none;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 15px;
 }
 
 @media (max-width: 900px) {
