@@ -39,6 +39,73 @@ a:hover {
 .center-child {
   text-align: center;
 }
+.mountain {
+  position: absolute;
+  bottom: 0;
+  z-index: 6;
+  opacity: 0.99;
+  border-bottom-color: #a8d6d5;
+  -webkit-transition: all 1000ms cubic-bezier(0.350, 0.085, 0.300, 0.990);
+  transition: all 1000ms cubic-bezier(0.350, 0.085, 0.300, 0.990);
+}
+#mountain-1 {
+  right: 160px;
+  border: 70px solid transparent;
+  border-bottom: 84px solid #a8d6d5;
+  opacity: 0.7;
+}
+#mountain-1.parallax-about {
+  border-bottom-color: #6bc1bf;
+  right: 190px;
+}
+#mountain-1.parallax-portfolio {
+  border-bottom-color: #5ebd8d;
+  right: 220px;
+}
+#mountain-2 {
+  right: 10px;
+  border: 100px solid transparent;
+  border-bottom: 120px solid #d68080;
+}
+#mountain-2.parallax-about {
+  border-bottom-color: #6bc1bf;
+  right: 60px;
+}
+#mountain-2.parallax-portfolio {
+  border-bottom-color: #5ebd8d;
+  right: 110px;
+}
+#mountain-3 {
+  right: 0;
+  border: 90px solid transparent;
+  border-bottom: 108px solid #a8d6d5;
+  transform: translateX(30%);
+  opacity: 0.5;
+}
+#mountain-3.parallax-about {
+  border-bottom-color: #6bc1bf;
+  right: 15px;
+}
+#mountain-3.parallax-portfolio {
+  border-bottom-color: #5ebd8d;
+  right: 30px;
+}
+#bird {
+  position: absolute;
+  bottom: 90px;
+  right: 70px;
+  z-index: 6;
+  width: 16px;
+  opacity: 0.6;
+  -webkit-transition: all 1000ms cubic-bezier(0.350, 0.085, 0.300, 0.990);
+  transition: all 1000ms cubic-bezier(0.350, 0.085, 0.300, 0.990);
+}
+#bird.parallax-about {
+  right: 80px;
+}
+#bird.parallax-portfolio {
+  right: 90px;
+}
 #overlay {
   position: absolute;
   left: 0;
@@ -554,6 +621,7 @@ a {
 }
 .fill-btn:hover:before {
   transform-origin: center bottom;
+  -webkit-transition: transform .25s ease;
   transition: transform .25s ease;
   transform: scale3d(1, 1, 1);
 }
@@ -561,6 +629,7 @@ a {
   content: '';
   background-color: #2fa0b5;
   transform: scale3d(1, 0, 1);
+  -webkit-transition: transform .25s ease;
   transition: transform .25s ease;
   transform-origin: center bottom;
   position: absolute;
@@ -685,8 +754,8 @@ a:hover .fill-span-inner {
 
 @media (min-width: 576px) {
   .modal-dialog {
-    /*max-width: 900px;*/
-    max-width: none;
+    max-width: 900px;
+    /*max-width: none;*/
     padding: 0 4%;
     width: 90%;
   }

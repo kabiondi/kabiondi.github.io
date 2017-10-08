@@ -65,6 +65,11 @@
                 </ul>
             </div>
         </div>
+        <!-- MOUNTAINS -->
+        <div class="mountain" id="mountain-1"></div>
+        <div class="mountain" id="mountain-2"></div>
+        <div class="mountain" id="mountain-3"></div>
+        <img id="bird" src="img/bird.png">
         <!-- PROFILE SECTION -->
         <div id="profile-section" class="section">
             <div class="inner">
@@ -230,6 +235,16 @@
             menu: '#myMenu',
             onLeave: function(index, nextIndex, direction) {
                 fadeOutHeader('#pagepiling .header .title-animate');
+                $('.mountain').removeClass('parallax-about parallax-portfolio');
+                $('#bird').removeClass('parallax-about parallax-portfolio');
+                if(nextIndex == 2) {
+                    $('.mountain').addClass('parallax-about');
+                    $('#bird').addClass('parallax-about');
+                }
+                if(nextIndex == 3) {
+                    $('.mountain').addClass('parallax-portfolio');
+                    $('#bird').addClass('parallax-portfolio');
+                }
             },
             afterLoad: function(anchorLink, index){
                 //using index
