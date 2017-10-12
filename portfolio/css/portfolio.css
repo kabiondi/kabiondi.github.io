@@ -422,7 +422,7 @@ a {
   overflow: hidden;
   cursor: pointer;
   position: relative;
-  border-radius: 3px;
+  /*border-radius: 3px;*/
   display: inline-block;
   width: 28%;
   margin: 0 2%;
@@ -593,6 +593,82 @@ a {
 .modal-body img {
   width: 100%;
 }
+.modal-body h4 {
+  /*font-family: Muli;*/
+  font-family: Montserrat;
+  /*font-family: Poppins;*/
+  /*font-family: Khula;*/
+  /*font-family: Cabin;*/
+/*  font-family: Oxygen;
+  font-family: Roboto;*/
+  /*text-transform: none;*/
+  color: #2fa0b5;
+  letter-spacing: 1px;
+  margin-bottom: 0.8em;
+  padding-right: 20px;
+}
+.modal-dialog {
+  color: #374d69;
+}
+.modal-header {
+  border-color: #a3d0d8;
+}
+.modal-header .close {
+  color: #bbb;
+  border: 2px solid #bbb;
+  border-radius: 2px;
+  width: 28px;
+  height: 28px;
+  background-color: #fff;
+  position: relative;
+  text-shadow: none;
+  margin-bottom: 4px;
+  margin-top: 4px;
+  transform: translate(0, 0);
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+.modal-header .close span {
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -5%);
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+.modal-header .close:hover {
+  height: 32px;
+  width: 32px;
+  margin-bottom: 0;
+  background-color: #f05a5d;
+  border-color: #f05a5d;
+  color: #fff;
+  transform: translate(7%, -2%);
+  opacity: 1;
+}
+.modal-header .close:hover span {
+  transform: translate(-50%, 0%);
+}
+.modal-title {
+  /*font-family: Muli;*/
+  font-family: Montserrat;
+/*  font-family: Poppins;
+  font-family: Khula;
+  font-family: Cabin;
+  font-family: Oxygen;
+  font-family: Roboto;*/
+  font-weight: 400;
+}
+.modal-dialog p {
+  font-family: Montserrat;
+  font-weight: 300;
+  text-transform: none;
+  letter-spacing: 1px;
+  color: #888;
+  padding-right: 20px;
+}
+.modal-content {
+  border-radius: 2px;
+}
 .demo-row {
   margin-bottom: 1em;
   margin-top: 2em;
@@ -603,6 +679,7 @@ a {
 }
 .demo-row .fill-btn {
   padding: 0.5em 3em;
+  border-radius: 2px;
 }
 
 /* BUTTONS */
