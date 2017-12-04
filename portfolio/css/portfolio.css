@@ -59,7 +59,7 @@ a:hover {
   right: 190px;
 }
 #mountain-1.parallax-portfolio {
-  border-bottom-color: #5ebd8d;
+  border-bottom-color: #ceb33f;
   right: 220px;
 }
 #mountain-2 {
@@ -72,7 +72,7 @@ a:hover {
   right: 60px;
 }
 #mountain-2.parallax-portfolio {
-  border-bottom-color: #5ebd8d;
+  border-bottom-color: #ceb33f;
   right: 110px;
 }
 #mountain-3 {
@@ -87,7 +87,7 @@ a:hover {
   right: 15px;
 }
 #mountain-3.parallax-portfolio {
-  border-bottom-color: #5ebd8d;
+  border-bottom-color: #ceb33f;
   right: 30px;
 }
 #bird {
@@ -337,6 +337,7 @@ a {
   display: inline-block;
   width: 97%;
   color: #2fa0b5;
+  padding-right: 0.5em;
 }
 .blurb p span {
   font-weight: 500;
@@ -406,19 +407,20 @@ a {
 #portfolio-section .blurb {
   padding-top: 0.2em;
 }
-.data-visualization {
-  background: url(../img/data-visualization.png) no-repeat;
+.left-item {
+  background: url(../img/moviedb.png) no-repeat;
 }
-.minesweeper {
-  background: url(../img/minesweeper.png) no-repeat;
-}
-.hexasynth {
+.center-item {
   background: url(../img/lightcube.png) no-repeat;
+}
+.right-item {
+  background: url(../img/minesweeper.png) no-repeat;
 }
 #alternate-portfolio {
   display: none;
 }
 .portfolio-item {
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3), 0 0 10px 2px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   cursor: pointer;
   position: relative;
@@ -469,12 +471,19 @@ a {
   /*background-color: #2fa0b5;*/
   /*opacity: 0.4;*/
 }
+.portfolio-item h3.hover-only {
+  opacity: 0;
+}
 .portfolio-item:hover h3 {
+  display: block;
   padding-left: 1.5em;
   bottom: 1.9em;
   z-index: 2;
   opacity: 1;
 }
+/*.portfolio-item.left-item h3 {
+  color: #666;
+}*/
 /*.portfolio-item.hexasynth h3 {
   color: #2fa0b5;
 }

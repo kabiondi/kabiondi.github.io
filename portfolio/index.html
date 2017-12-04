@@ -81,7 +81,8 @@
                     <h1 class="mast__title js-spanize">Developer</h1>
                 </div>
                 <div class="blurb">
-                    <p><span>Kellen is a front end developer</span> with the skills you want in a lorem ipsum bootstrap making. Responsive design pixel perfect the attention to detail that blah</p>
+                    <!-- <p><span>Kellen is a front end developer</span> with the skills you want in a lorem ipsum bootstrap making. Responsive design pixel perfect the attention to detail that blah</p> -->
+                    <p><span>I'm a full-stack developer</span> specializing in front-end development. I love crafting pixel perfect user experiences for web & mobile.</p>
                     <div class="animate-divider"></div>
                 </div>
             </div>
@@ -96,10 +97,12 @@
                 </div>
                 <div class="animate-divider"></div>
                 <div class="blurb">
-                    <p class="about-main">A JavaScript programmer, enthusiastic about building web applications, I am particularly interested in client-side development.</p>
-                    <p class="about-extra">I'm a passionate musician and a beginner to film making. I love backpacking and creating. The ways people are affected by art and technology blah blah.</p>
+                    <!-- <p class="about-main">A JavaScript programmer, enthusiastic about building web applications, I am particularly interested in client-side development.</p> -->
+                    <p class="about-main">There's a big difference between meeting minimum requirements and creating something beautiful</p>
+                    <!-- <p class="about-extra">I'm a passionate musician and a beginner to film making. I love backpacking and creating. The ways people are affected by art and technology blah blah.</p> -->
+                    <p class="about-extra">I continuously seek to learn and develop new skills to master the handoff between content and UI that creates a special user experience</p>
                 </div>
-                <div class=" blurb about-extra">I'm a passionate musician and a beginner to film making. I love backpacking and creating. The ways people are affected by art and technology blah blah.</div>
+                <div class=" blurb about-extra">I continuously seek to learn and develop new skills to master the handoff between content and UI that creates a special user experience.</div>
             </div>
         </div>
         <!-- PORTFOLIO SECTION -->
@@ -107,41 +110,43 @@
             <div class="inner">
                 <div id="portfolio-content">
                     <div id="alternate-portfolio">
-                        <div class="alternate-title">Hash Slider</div>
-                        <div class="alternate-title">HexaSynth</div>
+                        <div class="alternate-title">MovieDb</div>
+                        <div class="alternate-title">CodePen</div>
                         <div class="alternate-title">Minesweeper</div>
                     </div>
-                    <div class="portfolio-item data-visualization">
+                    <div class="portfolio-item left-item">
                         <button class="modal-open portfolio-overlay" data-toggle="modal" data-target="#firstPortfolioItem"></button>
                         <div class="portfolio-icon">+</div>
-                        <h3>Hash Slider</h3>
+                        <h3 class="hover-only">MovieDb</h3>
                         <div class="portfolio-divider"></div>
                         <ul class="desc">
-                            <li><span>Data Visualization</span></li>
+                            <li><span>Vue.js</span></li>
+                            <li><span>IMDb API</span></li>
                         </ul>
                     </div>
-                    <div class="portfolio-item hexasynth">
-                        <button class="portfolio-overlay" data-toggle="modal" data-target="#secondPortfolioItem"></button>
+                    <div class="portfolio-item center-item">
+                        <a href="https://codepen.io/collection/DPWjQq/" class="portfolio-overlay"></a>
                         <div class="portfolio-icon">+</div>
-                        <h3>HexaSynth</h3>
+                        <h3>CodePen</h3>
                         <div class="portfolio-divider"></div>
                         <ul class="desc">
-                            <li><span>Web Audio API</span></li>
+                            <li><span>Selected Pens</span></li>
                         </ul>
                     </div>
-                    <div class="portfolio-item minesweeper">
+                    <div class="portfolio-item right-item">
                         <button class="portfolio-overlay" data-toggle="modal" data-target="#thirdPortfolioItem"></button>
                         <div class="portfolio-icon">+</div>
-                        <h3>Minesweeper</h3>
+                        <h3 class="hover-only">Minesweeper</h3>
                         <div class="portfolio-divider"></div>
                         <ul class="desc">
-                            <li><span>Node app</span></li>
+                            <li><span>XP style</span></li>
                         </ul>
                     </div>
                 </div>
                 <div class="horizontal-line"></div>
                 <div class="blurb">
-                    <p><span>Kellen is a front end developer</span> with the skills you want in a lorem ipsum bootstrap making. Responsive design pixel perfect the attention to detail.</p>
+                    <!-- <p><span>Kellen is a front end developer</span> with the skills you want in a lorem ipsum bootstrap making. Responsive design pixel perfect the attention to detail.</p> -->
+                    <p><span>A few personal portfolio items.</span> I'm currently loving effortless state management and reactivity of Vue.js</p>
                 </div>
             </div>
         </div>
@@ -150,22 +155,32 @@
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Hash Slider</h5>
+                <h5 class="modal-title" id="exampleModalLabel">MovieDb</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div class="modal-body">
-                ...
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="img/moviedb.png">
+                    </div>
+                    <div class="col-md-8">
+                        <h4>MovieDb</h4>
+                        <p>A Vue.js Webpack app that uses the IMDb API to get movie details. All of the scripts are writtin in Vue.js and the styling in SCSS. No jQuery. No Bootstrap. Just state-driven reactivity.</p>
+                        <div class="demo-row center-child"><a href="http://kellenbiondi.com/MovieDB" class="fill-btn"><span class="fill-span-outer"><span class="fill-span-inner">Demo</span></span></a></div>
+                        <div class="center-child"><a href="https://github.com/kabiondi/MovieDB" class="source-btn"><i class="fa fa-github social-links" aria-hidden="true"></i> View Source</a></div>
+                    </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="modal fade" id="secondPortfolioItem" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!--         <div class="modal fade" id="secondPortfolioItem" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">HexaSynth</h5>
+                <h5 class="modal-title" id="exampleModalLabel">CodePen</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -185,18 +200,28 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <div class="modal fade" id="thirdPortfolioItem" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Hash Slider</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Minesweeper XP</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div class="modal-body">
-                ...
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="img/hexasynth.png">
+                    </div>
+                    <div class="col-md-8">
+                        <h4>Windows XP styled minesweeper</h4>
+                        <p>The classic Windows minesweeper made in javascript. Styled to clone the Windows XP version because really, isn't that half the charm anyway?</p>
+                        <div class="demo-row center-child"><a href="http://kellenbiondi.com/javascript-mine-puzzle/" class="fill-btn"><span class="fill-span-outer"><span class="fill-span-inner">Demo</span></span></a></div>
+                        <div class="center-child"><a href="https://github.com/kabiondi/javascript-mine-puzzle" class="source-btn"><i class="fa fa-github social-links" aria-hidden="true"></i> View Source</a></div>
+                    </div>
+                </div>
               </div>
             </div>
           </div>
