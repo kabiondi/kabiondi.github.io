@@ -5,7 +5,7 @@
 }
 @media(max-width: 900px) {
 	.portfolio-item .portfolio-icon {
-		font-size: 56px;
+		font-size: 250px;
 	}
 	.portfolio-item {
 		font-size: 14px;
@@ -16,7 +16,7 @@
 }
 @media(max-width: 880px) {
 	.portfolio-item .portfolio-icon {
-		font-size: 52px;
+		font-size: 240px;
 	}
 	.portfolio-item h3 {
 		/*font-size: 22px;*/
@@ -24,7 +24,7 @@
 }
 @media(max-width: 860px) {
 	.portfolio-item .portfolio-icon {
-		font-size: 46px;
+		font-size: 230px;
 	}
 	.portfolio-item h3 {
 		font-size: 21px;
