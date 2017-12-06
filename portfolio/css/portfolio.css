@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Muli:100,200,300,400,500,600');
+/*@import url('https://fonts.googleapis.com/css?family=Muli:100,200,300,400,500,600');*/
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600');
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600');
-@import url('https://fonts.googleapis.com/css?family=Khula:100,200,300,400,500,600');
+/*@import url('https://fonts.googleapis.com/css?family=Khula:100,200,300,400,500,600');*/
 
 @import url('https://fonts.googleapis.com/css?family=Cabin');
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
-@import url('https://fonts.googleapis.com/css?family=Maven+Pro');
+/*@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');*/
+/*@import url('https://fonts.googleapis.com/css?family=Maven+Pro');*/
 @import url('https://fonts.googleapis.com/css?family=Oxygen');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,500');
-@import url('https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700,800');
+/*@import url('https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700,800');*/
 @import url('https://fonts.googleapis.com/css?family=Kanit:700');
 @font-face {
     font-family: 'Glyphicons Halflings';
@@ -146,14 +146,14 @@ a:hover {
   display: inline-block;
   margin: 0.5em;
 }
-#contact-dropdown .social-links {
+#contact-dropdown .soc-links {
   font-size: 190%;
   cursor: pointer;
   color: #fff;
   -webkit-transition: color .5s ease;
   transition: color .5s ease;
 }
-#contact-dropdown .social-links:hover {
+#contact-dropdown .soc-links:hover {
  color: #f05a5d;
 }
 #contact-dropdown.show-contact {

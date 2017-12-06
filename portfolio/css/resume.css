@@ -44,7 +44,7 @@ h4 {
 	background-color: #1d3247;
 	color: #fff;
 }
-.resume-header i.social-links {
+.resume-header i.soc-links {
 	font-size: 150%;
 	margin-right: 0.5em;
 	color: #fff;
@@ -52,13 +52,13 @@ h4 {
   -webkit-transition: color .5s ease;
   transition: color .5s ease;
 }
-.resume-header i.social-links:hover {
+.resume-header i.soc-links:hover {
 	color: #2fa0b5;
 }
 .resume-right p:last-of-type {
 	margin-bottom: 0.5em;
 }
-.resume-right a:last-of-type i.social-links {
+.resume-right a:last-of-type i.soc-links {
 	margin-right: 0;
 }
 .header-inner {
