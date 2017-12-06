@@ -36,6 +36,15 @@ a {
 a:hover {
   color: #217382;
 }
+.fa-linkedinicon:before {
+  content: "\f0e1";
+}
+.fa-githubicon:before {
+  content: "\f09b";
+}
+.fa-codepenicon:before {
+  content: "\f1cb";
+}
 .center-child {
   text-align: center;
 }
