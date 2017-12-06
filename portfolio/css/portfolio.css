@@ -36,7 +36,7 @@ a {
 a:hover {
   color: #217382;
 }
-.fa-testthis:before {
+.fa-liicon:before {
   content: "\f0e1";
 }
 .fa-ghicon:before {
