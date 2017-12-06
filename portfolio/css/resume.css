@@ -20,13 +20,13 @@ h4 {
 	font-size: 26px;
 	padding: 0.5em 0;
 }
-.fa-linkedinicon:before {
+.fa-liicon:before {
   content: "\f0e1";
 }
-.fa-githubicon:before {
+.fa-ghicon:before {
   content: "\f09b";
 }
-.fa-codepenicon:before {
+.fa-cpicon:before {
   content: "\f1cb";
 }
 #return-home {
@@ -53,7 +53,7 @@ h4 {
 	background-color: #1d3247;
 	color: #fff;
 }
-.resume-header i.soc-links {
+.resume-header i.slinks {
 	font-size: 150%;
 	margin-right: 0.5em;
 	color: #fff;
@@ -61,13 +61,13 @@ h4 {
   -webkit-transition: color .5s ease;
   transition: color .5s ease;
 }
-.resume-header i.soc-links:hover {
+.resume-header i.slinks:hover {
 	color: #2fa0b5;
 }
 .resume-right p:last-of-type {
 	margin-bottom: 0.5em;
 }
-.resume-right a:last-of-type i.soc-links {
+.resume-right a:last-of-type i.slinks {
 	margin-right: 0;
 }
 .header-inner {

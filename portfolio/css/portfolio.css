@@ -39,10 +39,10 @@ a:hover {
 .fa-testthis:before {
   content: "\f0e1";
 }
-.fa-githubicon:before {
+.fa-ghicon:before {
   content: "\f09b";
 }
-.fa-codepenicon:before {
+.fa-cpicon:before {
   content: "\f1cb";
 }
 .center-child {
@@ -155,14 +155,14 @@ a:hover {
   display: inline-block;
   margin: 0.5em;
 }
-#contact-dropdown .soc-links {
+#contact-dropdown .slinks {
   font-size: 190%;
   cursor: pointer;
   color: #fff;
   -webkit-transition: color .5s ease;
   transition: color .5s ease;
 }
-#contact-dropdown .soc-links:hover {
+#contact-dropdown .slinks:hover {
  color: #f05a5d;
 }
 #contact-dropdown.show-contact {
