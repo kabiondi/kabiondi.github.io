@@ -417,6 +417,15 @@ a {
 #portfolio-section .blurb {
   padding-top: 0.2em;
 }
+#portfolio-content .alternate-title span {
+  cursor: pointer;
+}
+#portfolio-content .alternate-title span:hover {
+  color: #217382;
+}
+#portfolio-content .alternate-title a {
+  text-decoration: none;
+}
 .left-item {
   background: url(../img/moviedb.png) no-repeat;
 }
@@ -886,7 +895,7 @@ a:hover .fill-span-inner {
     padding-top: 9em;
   }
   #about-section .lead-text {
-    margin-left: 2%;
+    margin-left: 4%;
     margin-bottom: 1em;
     /*margin-right: 12%;*/
   }
