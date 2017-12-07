@@ -217,7 +217,8 @@ a:hover {
   opacity: 0;
 }
 .fixed {
-  position: fixed;
+  /*position: fixed;*/
+  position: absolute;
   z-index: 9;
   top: 6%;
 }
