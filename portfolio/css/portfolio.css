@@ -623,7 +623,9 @@ a {
   display: block;
   opacity: 0.5;
 }*/
-
+#pagepiling .modal {
+  position: absolute;
+}
 .modal-backdrop {
   background: radial-gradient(ellipse at top, #033d94 0%, #090A0F 100%);
 }
