@@ -836,6 +836,50 @@ a:hover .fill-span-inner {
     padding: 27px 0 0;
     font-size: 20px;
   }
+  .mountain {
+    bottom: -60px;
+  }
+  #mountain-1 {
+    right: 90px;
+    opacity: 0.7;
+  }
+  #mountain-1.parallax-about {
+    right: 97px;
+  }
+  #mountain-1.parallax-portfolio {
+    right: 104px;
+  }
+  #mountain-2 {
+    right: 0px;
+  }
+  #mountain-2.parallax-about {
+    right: 10px;
+  }
+  #mountain-2.parallax-portfolio {
+    right: 20px;
+    opacity: 0.5;
+  }
+  #mountain-3 {
+    right: 0;
+    opacity: 0.5;
+  }
+  #mountain-3.parallax-about {
+    right: 7px;
+  }
+  #mountain-3.parallax-portfolio {
+    right: 14px;
+  }
+  #bird {
+    bottom: 50px;
+    right: 70px;
+    width: 14px;
+  }
+  #bird.parallax-about {
+    right: 75px;
+  }
+  #bird.parallax-portfolio {
+    right: 80px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -915,50 +959,6 @@ a:hover .fill-span-inner {
 }
 
 @media (max-width: 500px) {
-  .mountain {
-    bottom: -60px;
-  }
-  #mountain-1 {
-    right: 100px;
-    opacity: 0.7;
-  }
-  #mountain-1.parallax-about {
-    right: 120px;
-  }
-  #mountain-1.parallax-portfolio {
-    right: 140px;
-  }
-  #mountain-2 {
-    right: 0px;
-  }
-  #mountain-2.parallax-about {
-    right: 12px;
-  }
-  #mountain-2.parallax-portfolio {
-    right: 24px;
-    opacity: 0.5;
-  }
-  #mountain-3 {
-    right: 0;
-    opacity: 0.5;
-  }
-  #mountain-3.parallax-about {
-    right: 7px;
-  }
-  #mountain-3.parallax-portfolio {
-    right: 14px;
-  }
-  #bird {
-    bottom: 50px;
-    right: 70px;
-    width: 14px;
-  }
-  #bird.parallax-about {
-    right: 75px;
-  }
-  #bird.parallax-portfolio {
-    right: 80px;
-  }
   #portfolio-content {
     padding-top: 0.7em;
     padding-bottom: 1.2em;
