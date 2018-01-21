@@ -111,7 +111,8 @@
                 <div id="portfolio-content">
                     <div id="alternate-portfolio">
                         <div class="alternate-title"><span data-toggle="modal" data-target="#firstPortfolioItem">MovieDb</span></div>
-                        <div class="alternate-title"><a href="https://codepen.io/collection/DPWjQq/">CodePen</a></div>
+                        <div class="alternate-title"><span data-toggle="modal" data-target="#secondPortfolioItem">CodePen</span></div>
+                        <!-- <div class="alternate-title"><a href="https://codepen.io/collection/DPWjQq/">CodePen</a></div> -->
                         <div class="alternate-title"><span data-toggle="modal" data-target="#thirdPortfolioItem">Minesweeper</span></div>
                     </div>
                     <div class="portfolio-item left-item">
@@ -125,7 +126,7 @@
                         </ul>
                     </div>
                     <div class="portfolio-item center-item">
-                        <a href="https://codepen.io/collection/DPWjQq/" class="portfolio-overlay"></a>
+                        <button class="modal-open portfolio-overlay" data-toggle="modal" data-target="#secondPortfolioItem"></button>
                         <div class="portfolio-icon">+</div>
                         <h3>CodePen</h3>
                         <div class="portfolio-divider"></div>
@@ -176,7 +177,7 @@
             </div>
           </div>
         </div>
-<!--         <div class="modal fade" id="secondPortfolioItem" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="secondPortfolioItem" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -187,20 +188,19 @@
               </div>
               <div class="modal-body">
                 <div class="row">
-                    <div class="col-md-4">
-                        <img src="img/hexasynth.png">
+                    <div class="col-sm-4 hidden-xs-down">
+                        <img src="img/lightcube.png">
                     </div>
-                    <div class="col-md-8">
-                        <h4>HexaSynth - Web API synthesizer</h4>
-                        <p>This is a synth I made. It's cool and it looks like this. Check it out. I need to take up some more space. Thank you.</p>
-                        <div class="demo-row center-child"><a href="https://codepen.io/kabiondi/full/VzoxrR/" class="fill-btn"><span class="fill-span-outer"><span class="fill-span-inner">Demo</span></span></a></div>
-                        <div class="center-child"><a href="https://codepen.io/kabiondi/full/VzoxrR/" class="source-btn"><i class="fa fa-codepen slinks" aria-hidden="true"></i> View Source</a></div>
+                    <div class="col-sm-8">
+                        <h4 class="hidden-xs-down">CodePen - Selected Pens</h4>
+                        <p>Check out my CodePen. Examples of my experimentation with Web Audio API, CSS transform3d, FlexBox, Animations and other front-end tools.</p>
+                        <div class="demo-row center-child"><a href="https://codepen.io/collection/DPWjQq/" class="fill-btn"><span class="fill-span-outer"><span class="fill-span-inner">Codepen</span></span></a></div>
                     </div>
                 </div>
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
         <div class="modal fade" id="thirdPortfolioItem" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">

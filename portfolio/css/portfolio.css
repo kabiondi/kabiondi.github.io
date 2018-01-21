@@ -68,7 +68,7 @@ a:hover {
   right: 190px;
 }
 #mountain-1.parallax-portfolio {
-  border-bottom-color: #ceb33f;
+  /*border-bottom-color: #ceb33f;*/
   right: 220px;
 }
 #mountain-2 {
@@ -81,7 +81,7 @@ a:hover {
   right: 60px;
 }
 #mountain-2.parallax-portfolio {
-  border-bottom-color: #ceb33f;
+  /*border-bottom-color: #ceb33f;*/
   right: 110px;
 }
 #mountain-3 {
@@ -96,7 +96,7 @@ a:hover {
   right: 15px;
 }
 #mountain-3.parallax-portfolio {
-  border-bottom-color: #ceb33f;
+  /*border-bottom-color: #ceb33f;*/
   right: 30px;
 }
 #bird {
